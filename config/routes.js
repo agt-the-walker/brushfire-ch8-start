@@ -43,7 +43,7 @@ module.exports.routes = {
     }
   },
   'GET /restore-profile': {
-    view: 'restore',
+    view: 'restore-profile',
     locals: {
       me: {
         id: null,
