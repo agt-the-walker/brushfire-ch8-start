@@ -4,6 +4,10 @@ module.exports.routes = {
    * Server-rendered HTML Pages                                *
    *************************************************************/
 
+  'GET /': {
+    view: 'homepage'
+  },
+
   'GET /videos': {
     view: 'videos',
     locals: {
