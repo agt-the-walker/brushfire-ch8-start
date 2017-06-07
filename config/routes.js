@@ -16,18 +16,9 @@ module.exports.routes = {
   'GET /administration': 'PageController.showAdminPage',
   'GET /profile': 'PageController.showProfilePage',
   'GET /edit-profile': 'PageController.showEditProfilePage',
-
-  'GET /signup': {
-    view: 'signup',
-    locals: {
-      me: {
-        id: null,
-        gravatarURL: 'http://www.gravatar.com/avatar/ef3eac6c71fdf24b13db12d8ff8d1264?',
-        email: 'sailsinaction@gmail.com'
-      }
-    }
-  },
+  'GET /signup': 'PageController.showSignupPage',
   'GET /restore-profile': 'PageController.showRestorePage',
+
   'GET /administration': {
     view: 'adminUsers',
     locals: {

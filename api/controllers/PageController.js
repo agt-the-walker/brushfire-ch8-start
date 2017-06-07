@@ -7,6 +7,16 @@
 
 module.exports = {
 
+  showSignupPage: function (req, res) {
+    if (req.session.userId) {
+      return res.redirect('/');
+    }
+
+    return res.view('signup', {
+      me: null
+    });
+  },
+
   showRestorePage: function (req, res) {
     if (req.session.userId) {
       return res.redirect('/');
