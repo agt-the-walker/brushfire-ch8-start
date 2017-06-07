@@ -4,12 +4,12 @@ angular.module('brushfire').controller('navPageController', ['$location', '$scop
   $scope.loginForm = {};
 
   $scope.me = window.SAILS_LOCALS.me;
-  
+
   $scope.submitLoginForm = function() {
 
     // Set the loading state (i.e. show loading spinner)
     $scope.loginForm.loading = true;
-  
+
   // Submit request to Sails.
     $http.put('/login', {
         email: $scope.loginForm.login,
@@ -17,14 +17,12 @@ angular.module('brushfire').controller('navPageController', ['$location', '$scop
         password: $scope.loginForm.password
       })
       .then(function onSuccess() {
-        // Redierct the page now that we've been logged in.
-        // window.location = '/videos';
-        // window.location = '/';
-        toastr.success('We have a match!', 'Success', {closeButton: true});
+        // Redirect the page now that we've been logged in.
+        window.location = '/videos';
       })
       .catch(function onError(sailsResponse) {
 
-        // Handle known error type(s).        
+        // Handle known error type(s).
         // Deleted account
         if (sailsResponse.status == 403) {
           toastr.error(sailsResponse.data, 'Error', {
