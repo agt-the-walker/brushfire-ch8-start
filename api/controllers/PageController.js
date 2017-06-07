@@ -7,6 +7,16 @@
 
 module.exports = {
 
+  showRestorePage: function (req, res) {
+    if (req.session.userId) {
+      return res.redirect('/');
+    }
+
+    return res.view('restore-profile', {
+      me: null
+    });
+  },
+
   showEditProfilePage: function (req, res) {
 
     if (!req.session.userId) {

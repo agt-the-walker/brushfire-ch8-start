@@ -27,16 +27,7 @@ module.exports.routes = {
       }
     }
   },
-  'GET /restore-profile': {
-    view: 'restore-profile',
-    locals: {
-      me: {
-        id: null,
-        gravatarURL: 'http://www.gravatar.com/avatar/ef3eac6c71fdf24b13db12d8ff8d1264?',
-        email: 'sailsinaction@gmail.com'
-      }
-    }
-  },
+  'GET /restore-profile': 'PageController.showRestorePage',
   'GET /administration': {
     view: 'adminUsers',
     locals: {
