@@ -12,13 +12,8 @@ module.exports.routes = {
    *************************************************************/
 
   'GET /': 'PageController.showHomePage',
+  'GET /videos': 'PageController.showVideosPage',
 
-  'GET /videos': {
-    view: 'videos',
-    locals: {
-      me: null
-    }
-  },
   'GET /profile': {
     view: 'profile',
     locals: {
