@@ -13,6 +13,7 @@ module.exports.routes = {
 
   'GET /': 'PageController.showHomePage',
   'GET /videos': 'PageController.showVideosPage',
+  'GET /administration': 'PageController.showAdminPage',
 
   'GET /profile': {
     view: 'profile',
